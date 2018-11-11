@@ -18,3 +18,179 @@ Movie Plot: N/A
 
 -----------------------------------------------------------------------
 
+--------------------------------------------------------------
+
+
+
+Name of Venue: Summit Music Hall
+
+Venue location: Denverundefined
+
+Date of the Event: undefined
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Name of Venue: Summit Music Hall
+
+Venue location: Denver CO
+
+Date of the Event: 11 20 2018
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Name of Venue: Summit Music Hall
+
+Venue location: Denver CO
+
+Date of the Event: 11 20 2018
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+Movie Title: Dunkirk
+
+Year movie released: 2017
+
+Movie rating: PG-13
+
+Rotten Tomatoes Rating: 92%
+
+Internet Movie Database Rating: 8.0/10
+
+Country: UK, Netherlands, France, USA
+
+Language: English, French, German
+
+Movie Plot: Allied soldiers from Belgium, the British Empire and France are surrounded by the German Army, and evacuated during a fierce battle in World War II.
+
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+
+Movie Title: Seven Samurai
+
+Year movie released: 1954
+
+Movie rating: NOT RATED
+
+Rotten Tomatoes Rating: 100%
+
+Internet Movie Database Rating: 8.7/10
+
+Country: Japan
+
+Language: Japanese
+
+Movie Plot: A poor village under attack by bandits recruits seven unemployed samurai to help them defend themselves.
+
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+
+Movie Title: Se7en
+
+Year movie released: 1995
+
+Movie rating: R
+
+Rotten Tomatoes Rating: 81%
+
+Internet Movie Database Rating: 8.6/10
+
+Country: USA
+
+Language: English
+
+Movie Plot: Two detectives, a rookie and a veteran, hunt a serial killer who uses the seven deadly sins as his motives.
+
+-----------------------------------------------------------------------
+
+--------------------------------------------------------------
+
+
+
+Name of Venue: Summit Music Hall
+
+Venue location: Denver CO
+
+Date of the Event: 11 20 2018
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Name of Venue: T-Mobile Arena
+
+Venue location: Las Vegas NV
+
+Date of the Event: 11 26 2018
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Name of Venue: Unstoppable Tour
+
+Venue location: Durham NC
+
+Date of the Event: 11 07 2018
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Name of Venue: Théâtre Du Léman
+
+Venue location: Genève 
+
+Date of the Event: 11 29 2018
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Name of Venue: Théâtre Du Léman
+
+Venue location: Genève 
+
+Date of the Event: 11 29 2018
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+Movie Title: Dunkirk
+
+Year movie released: 2017
+
+Movie rating: PG-13
+
+Rotten Tomatoes Rating: 92%
+
+Internet Movie Database Rating: 8.0/10
+
+Country: UK, Netherlands, France, USA
+
+Language: English, French, German
+
+Movie Plot: Allied soldiers from Belgium, the British Empire and France are surrounded by the German Army, and evacuated during a fierce battle in World War II.
+
+-----------------------------------------------------------------------
+

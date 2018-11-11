@@ -9,22 +9,23 @@ var internetRating;
 var input = process.argv;
 var action = input[2];
 var inputs = input[3];
+var moment = require('moment');
 
 switch (action) {
     case "concert-this":
-        concert (inputs);
+        concert(inputs);
         break;
 
     case "spotify-this-song":
-        song (inputs);
+        song(inputs);
         break;
 
     case "movie-this":
-        movie (inputs);
+        movie(inputs);
         break;
 
     case "do-what-it-says":
-        doIt ();
+        doIt();
         break;
 };
 
@@ -38,12 +39,12 @@ function concert(inputs) {
 
     request.get(queryUrl, function (error, response) {
         if (!error && response.statusCode === 200) {
-
+            var res = JSON.parse(response.body)[0];
             var concertThis =
                 "--------------------------------------------------------------" + "\n\n" + "\n\n" +
-                "Name of Venue: " + venue.name + "\n\n" +
-                "Venue location: " + venue.city + venue.state + "\n\n" +
-                "Date of the Event: " + venue.datetime + "\n\n" + "\n\n" + "------------------------------------------------------------------"
+                "Name of Venue: " + res.venue.name + "\n\n" +
+                "Venue location: " + res.venue.city + " " + res.venue.region + "\n\n" +
+                "Date of the Event: " + moment(res.datetime).format("MM DD YYYY") + "\n\n" + "\n\n" + "------------------------------------------------------------------"
             console.log(concertThis);
             writeToLog(concertThis);
         }
@@ -54,25 +55,26 @@ function concert(inputs) {
 
 function song(inputs) {
 
-	var spotify = new Spotify(keys.spotifyKeys);
-		if (!inputs){
-        	inputs = 'I Want it That Way';
-    	}
-		spotify.search({ type: 'track', query: inputs }, function(err, data) {
-			if (err){
-	            console.log('Error occurred: ' + err);
-	            return;
-	        }
+    console.log(keys.spotify)
+    var spotify = new Spotify(keys.spotify);
+    if (!inputs) {
+        inputs = 'I Want it That Way';
+    }
+    spotify.search({ type: 'track', query: inputs }, function (err, data) {
+        if (err) {
+            console.log('Error occurred: ' + err);
+            return;
+        }
 
-	        var songInfo = data.tracks.items;
-	        console.log("Artist(s): " + songInfo[0].artists[0].name);
-	        console.log("Song Name: " + songInfo[0].name);
-	        console.log("Preview Link: " + songInfo[0].preview_url);
-	        console.log("Album: " + songInfo[0].album.name);
-	});
+        var songInfo = data.tracks.items;
+        console.log("Artist(s): " + songInfo[0].artists[0].name);
+        console.log("Song Name: " + songInfo[0].name);
+        console.log("Preview Link: " + songInfo[0].preview_url);
+        console.log("Album: " + songInfo[0].album.name);
+    });
 }
 
-function movie (inputs) {
+function movie(inputs) {
 
 
     var queryUrl = "http://www.omdbapi.com/?t=" + inputs + "&y=&plot=short&apikey=trilogy";
@@ -116,7 +118,7 @@ function movie (inputs) {
 
 }
 
-function doIt () {
+function doIt() {
     fs.readFile("random.txt", "utf8", function (error, data) {
 
         if (error) {
