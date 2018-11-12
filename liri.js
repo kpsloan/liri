@@ -24,9 +24,6 @@ switch (action) {
         movie(inputs);
         break;
 
-    case "do-what-it-says":
-        doIt();
-        break;
 };
 
 function concert(inputs) {
@@ -67,10 +64,15 @@ function song(inputs) {
         }
 
         var songInfo = data.tracks.items;
-        console.log("Artist(s): " + songInfo[0].artists[0].name);
-        console.log("Song Name: " + songInfo[0].name);
-        console.log("Preview Link: " + songInfo[0].preview_url);
-        console.log("Album: " + songInfo[0].album.name);
+        var randomSong =
+            "-----------------------------------------------------------------------" + "\n\n" +
+            "Artist(s): " + songInfo[0].artists[0].name + "\n\n" +
+            "Song Name: " + songInfo[0].name + "\n\n" +
+            "Album: " + songInfo[0].album.name + "\n\n" +
+            "Preview Link: " + songInfo[0].preview_url + "\n\n" +
+            "-----------------------------------------------------------------------" + "\n\n"
+        console.log(randomSong);
+        writeToLog(randomSong);
     });
 }
 
@@ -98,17 +100,18 @@ function movie(inputs) {
 
                 }
             }
-
+            
+            var mov = JSON.parse(response.body);
             var myMovie =
                 "-----------------------------------------------------------------------" + "\n\n" +
-                "Movie Title: " + JSON.parse(body).Title + "\n\n" +
-                "Year movie released: " + JSON.parse(body).Year + "\n\n" +
-                "Movie rating: " + JSON.parse(body).Rated + "\n\n" +
-                "Rotten Tomatoes Rating: " + tomatoesRating + "\n\n" +
+                "Movie Title: " + mov.Title + "\n\n" +
+                "Actors: " + mov.Actors + "\n\n" +
+                "Year movie released: " + mov.Year + "\n\n" +
                 "Internet Movie Database Rating: " + internetRating + "\n\n" +
-                "Country: " + JSON.parse(body).Country + "\n\n" +
-                "Language: " + JSON.parse(body).Language + "\n\n" +
-                "Movie Plot: " + JSON.parse(body).Plot + "\n\n" +
+                "Rotten Tomatoes Rating: " + tomatoesRating + "\n\n" +
+                "Country: " + mov.Country + "\n\n" +
+                "Language: " + mov.Language + "\n\n" +
+                "Movie Plot: " + mov.Plot + "\n\n" +
                 "-----------------------------------------------------------------------" + "\n\n"
             console.log(myMovie);
             writeToLog(myMovie);
@@ -116,39 +119,6 @@ function movie(inputs) {
         }
     });
 
-}
-
-function doIt() {
-    fs.readFile("random.txt", "utf8", function (error, data) {
-
-        if (error) {
-            return console.log(error);
-        }
-
-        var nameArr = data.split(",");
-
-
-        name = nameArr[1]
-
-
-        spotify.search({ type: 'track', query: name, limit: 1 }, function (err, data) {
-            if (err) {
-                return console.log('Error occurred: ' + err);
-            }
-
-            var track = data.tracks.items[0];
-            var randomSong =
-                "-----------------------------------------------------------------------" + "\n\n" +
-                "Song Title: " + name + "\n\n" +
-                "Artist: " + track.artists[0].name + "\n\n" +
-                "Album: " + track.album.name + "\n\n" +
-                "Preview Link: " + track.preview_url + "\n\n" +
-                "-----------------------------------------------------------------------" + "\n\n"
-            console.log(randomSong);
-            writeToLog(randomSong);
-        })
-
-    });
 }
 
 
